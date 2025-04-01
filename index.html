@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>신정헌 | 프론트엔드 개발자</title>
   <style>
     body {
       background-color: #f4f4f4;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding: 50px;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
     }
     .container {
+      max-width: 900px;
+      margin: 60px auto;
       background: white;
-      border-radius: 10px;
       padding: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      display: inline-block;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    .tech-stack img {
+      margin: 8px;
+      height: 32px;
+    }
+    ul {
+      line-height: 1.6;
     }
     a {
       color: #007acc;
       text-decoration: none;
     }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>안녕하세요, 신정헌입니다 👋</h1>
-    <p>사용자 경험을 고민하고, 함께 성장하는 개발자입니다.</p>
-    <h2>💻 주요 프로젝트</h2>
-    <ul style="text-align: left;">
-      <li><a href="https://github.com/JeongHeon2/climbing-app">클라이밍 정보 앱</a> - Flutter, Naver Map 연동</li>
-      <li><a href="https://github.com/JeongHeon2/web-reservation">웹 예약 시스템</a> - Next.js 기반 WebView</li>
-    </ul>
-    <h2>📫 연락처</h2>
-    <p>Email: wjdgjs1230100@gmail.com</p>
-    <p><a href="https://github.com/JeongHeon2">GitHub 프로필</a></p>
+    <h1>👋 신정헌 | 프론트엔드 개발자</h1>
+
+    <div class="section">
+      <p>
+        도전을 즐기고, 함께 성장하는 것을 좋아하는 개발자입니다.<br>
+        사용자 경험을 고려한 개발과 협업을 통한 문제 해결에 가치를 두고 있습니다.<br>
+        클라이밍처럼 스스로 해답을 찾아가는 과정을 즐기며, 기술과 사람을 잇는 개발을 지향합니다.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>🛠️ 기술 스택</h2>
+      <div class="tech-stack">
+        <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black" />
+        <img src="https://img.shields.io/badge/Nexacro-4B4B4B?style=for-the-badge&logo=Nexacro&logoColor=white" />
+        <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=Java&logoColor=white" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black" />
+        <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white" />
+        <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white" />
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📌 주요 프로젝트</h2>
+      <ul>
+        <li>
+          <strong>ERP 기반 물류 시스템 개발 (React)</strong><br>
+          물류 데이터 흐름을 관리하는 ERP 시스템 프론트엔드를 React로 구축.<br>
+          사용자 인터페이스 개선, 반응형 설계, API 통신 및 재고 흐름 로직 구현 등 수행.<br>
+          <a href="https://github.com/JeongHeon2/erp-react" target="_blank">→ GitHub 링크</a>
+        </li>
+        <li>
+          <strong>ERP 기반 물류 시스템 유지보수 (Nexacro)</strong><br>
+          Nexacro 플랫폼을 활용한 기존 ERP 물류 시스템의 기능 유지보수 및 화면 개선.<br>
+          다양한 사용자 요구사항 반영 및 화면 간 데이터 흐름 정리.<br>
+          <a href="https://github.com/JeongHeon2/erp-nexacro" target="_blank">→ GitHub 링크</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>📫 연락처</h2>
+      <p>Email: <a href="mailto:wjdgjs1230100@gmail.com">wjdgjs1230100@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/JeongHeon2">JeongHeon2</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/hxxn._.i/">@hxxn._.i</a></p>
+    </div>
   </div>
 </body>
 </html>
