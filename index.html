@@ -1,101 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <title>신정헌 | 프론트엔드 개발자</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>신정헌 | 새로운 기술과 협업을 즐기는 개발자</title>
   <style>
     body {
-      background-color: #f4f4f4;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: #0f172a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #cbd5e1;
+      scroll-behavior: smooth;
     }
-    .container {
-      max-width: 900px;
-      margin: 60px auto;
-      background: white;
-      padding: 40px;
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      color: #5eead4;
+      margin: 0;
+    }
+
+    nav a {
+      margin-left: 30px;
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #5eead4;
+    }
+
+    section {
+      padding: 100px 60px 80px;
+    }
+
+    #home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      gap: 50px;
+    }
+
+    #home img {
+      width: 220px;
       border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      border: 3px solid #5eead4;
     }
-    h1 {
-      text-align: center;
+
+    .intro-text h2 {
+      color: #5eead4;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
-    .section {
-      margin-top: 40px;
+
+    .intro-text h1 {
+      font-size: 3rem;
+      color: #e2e8f0;
+      margin: 0 0 10px;
     }
-    .tech-stack img {
-      margin: 8px;
-      height: 32px;
-    }
-    ul {
+
+    .intro-text p {
+      color: #94a3b8;
       line-height: 1.6;
     }
-    a {
-      color: #007acc;
-      text-decoration: none;
+
+    h2.section-title {
+      color: #5eead4;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
     }
-    a:hover {
-      text-decoration: underline;
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>👋 신정헌 | 새로운 기술과 협업을 즐기는 개발자입니다.</h1>
 
-    <div class="section">
+  <header>
+    <h1>JH</h1>
+    <nav>
+      <a href="#home">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <img src="신정헌 증명사진.jpg" alt="신정헌 프로필 사진" />
+    <div class="intro-text">
+      <h2>안녕하세요, 제 이름은</h2>
+      <h1>신정헌입니다.</h1>
       <p>
-        도전을 즐기고, 함께 성장하는 것을 좋아하는 개발자입니다.<br>
-        사용자 경험을 고려한 개발과 협업을 통한 문제 해결에 가치를 두고 있습니다.<br>
-        클라이밍처럼 스스로 해답을 찾아가는 과정을 즐기며, 기술과 사람을 잇는 개발을 지향합니다.
+        도전을 즐기는 프론트엔드 개발자입니다.<br />
+        새로운 기술을 배우는 것을 즐기며,<br />
+        협업을 통해 더 나은 서비스를 만드는 데 큰 보람을 느낍니다.
       </p>
     </div>
+  </section>
 
-    <div class="section">
-      <h2>🛠️ 기술 스택</h2>
-      <div class="tech-stack">
-        <img src="https://img.shields.io/badge/Nexacro-4B4B4B?style=for-the-badge&logo=Nexacro&logoColor=white" />
-        <img src="https://img.shields.io/badge/Github-181717?style=for-the-badge&logo=Github&logoColor=white">
-    <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=Java&logoColor=white">
-    <img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white">
-    <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white">
-    <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=Oracle&logoColor=white"><br/>
-    <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
-    <img src="https://img.shields.io/badge/ReduxSaga-999999?style=for-the-badge&logo=ReduxSaga&logoColor=white">
-    <img src="https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=white">
-    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
-    <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white"><br/>
-    <img src="https://img.shields.io/badge/Spring Boot-6DB33F?style=for-the-badge&logo=Spring Boot&logoColor=white">
-      </div>
-    </div>
+  <section id="skills">
+    <h2 class="section-title">🛠️ Skills</h2>
+    <p>React, JavaScript, Nexacro, Java, Spring, Oracle, Git, Node.js 등</p>
+  </section>
 
-    <div class="section">
-      <h2>📌 주요 프로젝트</h2>
-      <ul>
-        <li>
-          <strong>ERP 기반 물류 시스템 개발 (React)</strong><br>
-          물류 데이터 흐름을 관리하는 ERP 시스템 프론트엔드를 React로 구축.<br>
-          사용자 인터페이스 개선, 반응형 설계, API 통신 및 재고 흐름 로직 구현 등 수행.<br>
-          <a href="https://github.com/JeongHeon2/React" target="_blank">→ GitHub 링크</a>
-      
-        </li>
-        <li>
-          <strong>ERP 기반 물류 시스템 유지보수 (Nexacro)</strong><br>
-          Nexacro 플랫폼을 활용한 기존 ERP 물류 시스템의 기능 유지보수 및 화면 개선.<br>
-          다양한 사용자 요구사항 반영 및 화면 간 데이터 흐름 정리.<br>
-          <a href="https://github.com/JeongHeon2/Nexacro" target="_blank">→ GitHub 링크</a>
-        </li>
-      </ul>
-    </div>
+  <section id="projects">
+    <h2 class="section-title">📌 Projects</h2>
+    <ul>
+      <li><strong>ERP 기반 물류 시스템 (React)</strong><br>React 기반 프론트엔드, 물류 흐름 시각화, API 연동</li><br>
+      <li><strong>ERP 유지보수 시스템 (Nexacro)</strong><br>Nexacro 플랫폼으로 사용자 맞춤형 화면 구성 및 유지보수</li>
+    </ul>
+  </section>
 
-    <div class="section">
-      <h2>📫 연락처</h2>
-      <p>Email: <a href="mailto:wjdgjs1230100@gmail.com">wjdgjs1230100@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/JeongHeon2">JeongHeon2</a></p>
-      <p>Instagram: <a href="https://www.instagram.com/hxxn._.i/">@hxxn._.i</a></p>
-    </div>
-  </div>
+  <section id="contact">
+    <h2 class="section-title">📫 Contact</h2>
+    <p>Email: <a href="mailto:wjdgjs1230100@gmail.com" style="color:#5eead4;">wjdgjs1230100@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/JeongHeon2" style="color:#5eead4;">github.com/JeongHeon2</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 신정헌. All rights reserved.
+  </footer>
+
 </body>
 </html>
