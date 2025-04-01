@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>신정헌 | 프론트엔드 개발자</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
@@ -80,6 +80,7 @@
       color: #5eead4;
       margin-bottom: 20px;
       font-size: 1.5rem;
+      text-align: center;
     }
 
     .skill-badges {
@@ -149,6 +150,8 @@
       margin-bottom: 30px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       transition: transform 0.2s ease;
+      text-decoration: none;
+      display: block;
     }
 
     .project-card:hover {
@@ -193,187 +196,135 @@
 </head>
 <body>
 
-  <header>
-    <h1>JH</h1>
-    <nav>
-      <a href="#home">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<header>
+  <h1>JH</h1>
+  <nav>
+    <a href="#home">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <section id="home">
-    <img src="신정헌 증명사진.jpg" alt="신정헌 프로필 사진" />
-    <div class="intro-text">
-      <h2>안녕하세요, 제 이름은</h2>
-      <h1>신정헌입니다.</h1>
-      <p>
-        도전을 즐기는 프론트엔드 개발자입니다.<br />
-        새로운 기술을 배우는 것을 즐기며,<br />
-        협업을 통해 더 나은 서비스를 만드는 데 큰 보람을 느낍니다.
-      </p>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2 class="section-title">🛠️ Skills</h2>
-    <div class="skill-badges">
-      <button class="skill" onclick="openModal('java')">JAVA</button>
-      <button class="skill" onclick="openModal('oracle')">Oracle</button>
-      <button class="skill" onclick="openModal('htmlcss')">HTML/CSS</button>
-      <button class="skill" onclick="openModal('javascript')">JavaScript</button>
-      <button class="skill" onclick="openModal('jsp')">JSP</button>
-      <button class="skill" onclick="openModal('spring')">Spring</button>
-      <button class="skill" onclick="openModal('jpa')">JPA</button>
-      <button class="skill" onclick="openModal('mybatis')">MyBatis</button>
-      <button class="skill" onclick="openModal('git')">Git</button>
-      <button class="skill" onclick="openModal('react')">React</button>
-      <button class="skill" onclick="openModal('nexacro')">Nexacro</button>
-    </div>
-  </section>
-
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h3 id="modal-title">Skill Name</h3>
-      <p id="modal-desc">Skill description will appear here.</p>
-    </div>
+<section id="home">
+  <img src="신정헌 증명사진.jpg" alt="신정헌 프로필 사진" />
+  <div class="intro-text">
+    <h2>안녕하세요, 제 이름은</h2>
+    <h1>신정헌입니다.</h1>
+    <p>
+      도전을 즐기는 프론트엔드 개발자입니다.<br />
+      새로운 기술을 배우는 것을 즐기며,<br />
+      협업을 통해 더 나은 서비스를 만드는 데 큰 보람을 느낍니다.
+    </p>
   </div>
+</section>
 
-  <section id="projects">
-    <h2 class="section-title">📌 Projects</h2>
+<section id="skills">
+  <h2 class="section-title">🛠️ Skills</h2>
+  <div class="skill-badges">
+    <button class="skill" onclick="openModal('java')">JAVA</button>
+    <button class="skill" onclick="openModal('oracle')">Oracle</button>
+    <button class="skill" onclick="openModal('htmlcss')">HTML/CSS</button>
+    <button class="skill" onclick="openModal('javascript')">JavaScript</button>
+    <button class="skill" onclick="openModal('jsp')">JSP</button>
+    <button class="skill" onclick="openModal('spring')">Spring</button>
+    <button class="skill" onclick="openModal('jpa')">JPA</button>
+    <button class="skill" onclick="openModal('mybatis')">MyBatis</button>
+    <button class="skill" onclick="openModal('git')">Git</button>
+    <button class="skill" onclick="openModal('react')">React</button>
+    <button class="skill" onclick="openModal('nexacro')">Nexacro</button>
+  </div>
+</section>
 
-    <div class="project-card">
-      <h3>Nexacro 기반 ERP 물류 프로젝트</h3>
-      <p class="sub">3인 팀 프로젝트</p>
-      <div class="tags">
-        <span>Spring Boot</span>
-        <span>MyBatis</span>
-        <span>JPA</span>
-        <span>Oracle</span>
-        <span>Nexacro</span>
-        <span>RESTful API</span>
-      </div>
-      <p class="desc">
-        Front-End로는 NexaCro를 사용하였고 Back는 SpringBoot, Mybatis, Jpa, Java를 사용하였으며<br>
-        DB는 Oracle을 사용하였습니다. 협업툴로는 Bitbucket과 SoureTree를 사용했습니다.
-      </p>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modal-title">Skill Name</h3>
+    <p id="modal-desc">Skill description will appear here.</p>
+  </div>
+</div>
+
+<section id="projects">
+  <h2 class="section-title">📌 Projects</h2>
+
+  <a href="https://github.com/JeongHeon2/Nexacro" target="_blank" class="project-card">
+    <h3>Nexacro 기반 ERP 물류 프로젝트</h3>
+    <p class="sub">3인 팀 프로젝트</p>
+    <div class="tags">
+      <span>Spring Boot</span><span>MyBatis</span><span>JPA</span><span>Oracle</span><span>Nexacro</span><span>RESTful API</span>
     </div>
+    <p class="desc">
+      Front-End로는 NexaCro를 사용하였고 Back는 SpringBoot, Mybatis, Jpa, Java를 사용하였으며<br>
+      DB는 Oracle을 사용하였습니다. 협업툴로는 Bitbucket과 SoureTree를 사용했습니다.
+    </p>
+  </a>
 
-    <div class="project-card">
-      <h3>React 기반 ERP 물류 프로젝트</h3>
-      <p class="sub">3인 팀 프로젝트</p>
-      <div class="tags">
-        <span>Spring Boot</span>
-        <span>MyBatis</span>
-        <span>JPA</span>
-        <span>Oracle</span>
-        <span>React</span>
-        <span>Redux-Saga</span>
-        <span>Next.js</span>
-        <span>RESTful API</span>
-      </div>
-      <p class="desc">
-        Front-End는 React + TypeScript와 Next.js를 사용하였고<br>
-        상태 관리는 Redux-Saga로 처리했습니다. Back은 SpringBoot, Mybatis, Jpa, Java를 사용하고<br>
-        DB는 Oracle, 협업툴로는 Bitbucket과 SoureTree를 사용했습니다.
-      </p>
+  <a href="https://github.com/JeongHeon2/React" target="_blank" class="project-card">
+    <h3>React 기반 ERP 물류 프로젝트</h3>
+    <p class="sub">3인 팀 프로젝트</p>
+    <div class="tags">
+      <span>Spring Boot</span><span>MyBatis</span><span>JPA</span><span>Oracle</span><span>React</span><span>Redux-Saga</span><span>Next.js</span><span>RESTful API</span>
     </div>
+    <p class="desc">
+      Front-End는 React + TypeScript와 Next.js를 사용하였고<br>
+      상태 관리는 Redux-Saga로 처리했습니다. Back은 SpringBoot, Mybatis, Jpa, Java를 사용하고<br>
+      DB는 Oracle, 협업툴로는 Bitbucket과 SoureTree를 사용했습니다.
+    </p>
+  </a>
 
-    <div class="project-card">
-      <h3>AI는 못말려</h3>
-      <p class="sub">5인 팀 프로젝트</p>
-      <div class="tags">
-        <span>Android Studio</span>
-        <span>Kotlin</span>
-        <span>Oracle</span>
-        <span>TensorFlow</span>
-      </div>
-      <p class="desc">
-        COVID-19로 인해 홈 트레이닝이 증가함에 따라 잘못된 자세로 인한 부상 문제를 해결하고자<br>
-        이 프로젝트를 기획했습니다. Front-End는 Android Studio, Back은 Oracle을 사용하고<br>
-        AI는 TensorFlow를 통해 자세 인식 기능을 구현했습니다.
-      </p>
+  <div class="project-card">
+    <h3>AI는 못말려</h3>
+    <p class="sub">5인 팀 프로젝트</p>
+    <div class="tags">
+      <span>Android Studio</span><span>Kotlin</span><span>Oracle</span><span>TensorFlow</span>
     </div>
-  </section>
+    <p class="desc">
+      COVID-19로 인해 홈 트레이닝이 증가함에 따라 잘못된 자세로 인한 부상 문제를 해결하고자<br>
+      이 프로젝트를 기획했습니다. Front-End는 Android Studio, Back은 Oracle을 사용하고<br>
+      AI는 TensorFlow를 통해 자세 인식 기능을 구현했습니다.
+    </p>
+  </div>
+</section>
 
-  <section id="contact">
-    <h2 class="section-title">📫 Contact</h2>
-    <p>Email: <a href="mailto:wjdgjs1230100@gmail.com" style="color:#5eead4;">wjdgjs1230100@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/JeongHeon2" style="color:#5eead4;">github.com/JeongHeon2</a></p>
-  </section>
+<section id="contact">
+  <h2 class="section-title">📫 Contact</h2>
+  <p>Email: <a href="mailto:wjdgjs1230100@gmail.com" style="color:#5eead4;">wjdgjs1230100@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/JeongHeon2" style="color:#5eead4;">github.com/JeongHeon2</a></p>
+</section>
 
-  <footer>
-    &copy; 2025 신정헌. All rights reserved.
-  </footer>
+<footer>
+  &copy; 2025 신정헌. All rights reserved.
+</footer>
 
-  <script>
-    const skillDescriptions = {
-      java: {
-        title: 'JAVA',
-        desc: '객체 지향 프로그래밍에 기반한 애플리케이션 개발 가능. 다양한 자료구조와 클래스 설계를 활용해 프로젝트를 구현해본 경험이 있습니다.'
-      },
-      oracle: {
-        title: 'Oracle',
-        desc: 'SQL 작성 및 데이터베이스 모델링 가능. ERP 프로젝트에서 Oracle DB와 연동된 기능을 직접 구현해본 경험이 있습니다.'
-      },
-      htmlcss: {
-        title: 'HTML/CSS',
-        desc: '웹의 구조와 스타일링에 대한 기본기를 바탕으로 반응형 UI를 구현할 수 있습니다.'
-      },
-      javascript: {
-        title: 'JavaScript',
-        desc: '이벤트 처리, DOM 조작, 비동기 통신 등에 익숙하며 프론트엔드 동작 로직을 직접 구현해본 경험이 있습니다.'
-      },
-      jsp: {
-        title: 'JSP',
-        desc: 'JSP를 활용한 서버사이드 템플릿 렌더링, 폼 처리, 세션 관리 등에 대한 경험이 있습니다.'
-      },
-      spring: {
-        title: 'Spring',
-        desc: 'Spring Boot를 활용해 REST API 개발, JPA 연동 등을 수행했습니다.'
-      },
-      jpa: {
-        title: 'JPA',
-        desc: '객체와 관계형 데이터베이스 간 매핑 설계에 익숙하며, 복잡한 쿼리를 JPQL로 구성해본 경험이 있습니다.'
-      },
-      mybatis: {
-        title: 'MyBatis',
-        desc: 'SQL Mapper 기반으로 XML과 인터페이스를 통한 쿼리 관리 경험이 있으며, 복잡한 조건 쿼리도 구현 가능합니다.'
-      },
-      git: {
-        title: 'Git',
-        desc: '버전 관리 및 협업 경험이 있습니다.'
-      },
-      react: {
-        title: 'React',
-        desc: '컴포넌트 기반 UI 구축, 상태 관리(Redux 등), Router 및 비동기 API 연동 경험이 있습니다.'
-      },
-      nexacro: {
-        title: 'Nexacro',
-        desc: 'Nexacro 플랫폼을 기반으로 한 ERP 프론트 개발 경험이 있습니다.'
-      }
-    };
+<script>
+  const skillDescriptions = {
+    java: { title: 'JAVA', desc: '객체 지향 기반 애플리케이션 개발 경험 보유' },
+    oracle: { title: 'Oracle', desc: 'SQL 작성 및 DB 연동 개발 경험 보유' },
+    htmlcss: { title: 'HTML/CSS', desc: '웹 마크업 및 반응형 스타일 구현' },
+    javascript: { title: 'JavaScript', desc: '프론트엔드 로직 및 비동기 처리 경험' },
+    jsp: { title: 'JSP', desc: '서버사이드 렌더링 및 폼 처리 경험' },
+    spring: { title: 'Spring', desc: 'REST API 및 백엔드 구성 경험' },
+    jpa: { title: 'JPA', desc: 'ORM 기반 DB 연동 설계 경험' },
+    mybatis: { title: 'MyBatis', desc: 'SQL Mapper 및 복잡 쿼리 구현 경험' },
+    git: { title: 'Git', desc: '협업 및 버전 관리 경험' },
+    react: { title: 'React', desc: '컴포넌트 기반 UI 및 상태 관리 구현' },
+    nexacro: { title: 'Nexacro', desc: 'ERP 프론트엔드 개발 경험' }
+  };
 
-    function openModal(skillKey) {
-      const modal = document.getElementById('modal');
-      const title = document.getElementById('modal-title');
-      const desc = document.getElementById('modal-desc');
+  function openModal(key) {
+    document.getElementById('modal-title').innerText = skillDescriptions[key].title;
+    document.getElementById('modal-desc').innerText = skillDescriptions[key].desc;
+    document.getElementById('modal').style.display = 'block';
+  }
 
-      title.innerText = skillDescriptions[skillKey].title;
-      desc.innerText = skillDescriptions[skillKey].desc;
-      modal.style.display = 'block';
-    }
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+  }
 
-    function closeModal() {
-      document.getElementById('modal').style.display = 'none';
-    }
-
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeModal();
-    });
-  </script>
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
 
 </body>
 </html>
