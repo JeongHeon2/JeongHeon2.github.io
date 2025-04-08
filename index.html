@@ -503,6 +503,19 @@
        border-radius: 12px;
        border: 3px solid #5eead4;
      }
+        .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.7); /* 이 부분이 글자 색을 지정해줘 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--text-primary); /* hover 시 흰색 */
+}
+
     </style>
 </head>
 
@@ -533,26 +546,33 @@
     </nav>
 
     <!-- 히어로 섹션 -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1 class="hero-title">
-                <img src="신정헌 증명사진.jpg" alt="신정헌 프로필 사진" />
-            </h1>
-            <p class="hero-description">
-                     <h2>안녕하세요, 제 이름은</h2>
-                     <h1>신정헌입니다.</h1>
-                     <p>    
-                       도전을 즐기는 개발자입니다.<br />
-                       새로운 기술을 배우는 것을 즐기며,<br />
-                       협업을 통해 더 나은 서비스를 만드는 데 큰 보람을 느낍니다.
-                     </p>
-            </p>
-            <div class="cta-container">
-                <a href="#projects" class="cta-button cta-primary">View Projects</a>
-                <a href="#contact" class="cta-button cta-secondary">Contact Me</a>
-            </div>
-        </div>
-    </section>
+<section class="hero" id="home">
+  <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 60px; flex-wrap: wrap;">
+    <!-- 왼쪽: 프로필 사진 -->
+    <div>
+      <img src="신정헌 증명사진.jpg" alt="신정헌 프로필 사진" style="width: 220px; border-radius: 12px; border: 3px solid #5eead4;" />
+    </div>
+
+    <!-- 오른쪽: 텍스트 및 버튼 -->
+    <div style="max-width: 520px; text-align: left; line-height: 1.8;">
+  <div class="intro-text">
+    <h2 style="font-size: 1.1rem; color: #7dd3fc; margin-bottom: 0.5rem;">
+      반갑습니다, 저는
+    </h2>
+    <h1 style="font-size: 2.8rem; color: #e2e8f0; font-weight: 700; margin-bottom: 1rem;">
+      신정헌입니다.
+    </h1>
+    <p style="font-size: 1rem; color: #cbd5e1;">
+      끊임없이 도전하며 성장하는 개발자입니다.<br />
+      새로운 기술을 배우는 즐거움과<br />
+      협업을 통해 더 나은 서비스를 만드는 과정에서 큰 보람을 느낍니다.
+    </p>
+  </div>
+</div>
+
+  </div>
+</section>
+
 
     <!-- 프로젝트 섹션 -->
     <section class="projects" id="projects">
@@ -752,10 +772,11 @@
                         <span>📱</span>
                         <span>+82 10-4424-8742</span>
 <!--                     </a> -->
-                        <a href="https://github.com/JeongHeon2">
-                        <span>📫</span>
-                        <span>github.com/JeongHeon2</span>
+                        <a href="https://github.com/JeongHeon2" class="contact-link" target="_blank">
+                          <span>📫</span>
+                          <span>github.com/JeongHeon2</span>
                         </a>
+
                 </div>
             </div>
             <form class="contact-form" id="contactForm">
