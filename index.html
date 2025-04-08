@@ -93,21 +93,25 @@
         }
 
         .nav-links {
-            display: flex;
-            gap: 40px;
+          display: flex;
+          gap: 40px;
+          height: 100%; /* 높이 설정 */
         }
 
+        
         .nav-link {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 600;
-            position: relative;
-            padding: 8px 0;
-            font-size: 1.15rem; /* 기존보다 조금 크게 */
-            display: flex;
-            align-items: center; /* 수직 가운데 정렬 */
-            height: 100%; /* 높이 맞춤 */
+          color: var(--text-primary);
+          text-decoration: none;
+          font-weight: 600;
+          position: relative;
+          font-size: 1.15rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          line-height: 70px; /* 추가: 부모 높이와 동일하게 맞추기 */
         }
+
 
 
         .nav-link::after {
@@ -178,14 +182,17 @@
         }
 
         .cta-primary {
-          background: linear-gradient(135deg, #7c3aed, #ec4899);
-          color: white;
-          box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+          background: rgba(59, 130, 246, 0.1); /* 연한 파랑 배경 */
+          border: 1px solid rgba(59, 130, 246, 0.3);
+          color: #93c5fd; /* 밝은 하늘색 텍스트 */
+          backdrop-filter: blur(4px);
+          box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
           transition: all 0.3s ease;
         }
         .cta-primary:hover {
+          background: rgba(59, 130, 246, 0.3);
+          color: #ffffff;
           transform: translateY(-5px);
-          box-shadow: 0 6px 20px rgba(236, 72, 153, 0.6);
         }
 
 
@@ -558,7 +565,7 @@
 
     <!-- 네비게이션 -->
     <nav class="nav">
-        <div class="logo">PORTFOLIO</div>
+        <div class="logo">JH Portfolio</div>
         <div class="nav-links">
             <a href="#home" class="nav-link">Home</a>
             <a href="#projects" class="nav-link">Projects</a>
