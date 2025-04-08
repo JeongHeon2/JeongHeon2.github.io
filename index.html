@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신정헌 | 신입 개발자</title>
+    <title>신정헌 | 개발자 포트폴리오</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -28,10 +28,10 @@
         }
 
         body {
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            overflow-x: hidden;
-        }
+      background: #0f0f0f;
+      color: #fff;
+      overflow-x: hidden;
+    }
 
         .cursor {
             width: 20px;
@@ -202,19 +202,20 @@
         .projects {
             padding: 100px 10vw;
         }
-
+.section {
+      padding: 100px 5vw;
+    }
         .section-header {
             margin-bottom: 80px;
             opacity: 0;
         }
 
         .section-title {
-            font-size: clamp(2rem, 5vw, 4rem);
-            margin-bottom: 20px;
-            background: linear-gradient(to right, var(--accent-1), var(--accent-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+      font-size: 3rem;
+      color: #ff3cac;
+      margin-bottom: 40px;
+    }
+
 
         .section-subtitle {
             color: rgba(255, 255, 255, 0.7);
@@ -223,37 +224,24 @@
         }
 
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+       .project-card {
+      background: #1a1a1a;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .project-card {
-            position: relative;
-            background: var(--glass);
-            border-radius: 20px;
-            padding: 30px;
-            cursor: pointer;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0;
-            transform: translateY(50px);
-        }
-
-   .project-card {
-    display: block;
-    text-decoration: none;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
    .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(255, 0, 110, 0.1);
-}
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 0, 110, 0.3);
+    }
         .tags {
     display: flex;
     flex-wrap: wrap;
@@ -288,15 +276,22 @@
             right: 20px;
         }
 
-        .project-content {
-            position: relative;
-            z-index: 1;
-        }
+       .project-content {
+      padding: 20px;
+    }
+           .project-thumbnail {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
 
-        .project-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
+
+          .project-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
 
         .project-description {
             color: rgba(255, 255, 255, 0.7);
@@ -304,20 +299,49 @@
             line-height: 1.6;
         }
 
-        .project-tags {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
+        .project-description {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
 
-        .project-tag {
-            padding: 5px 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-tags span {
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #ff3cac;
+    }
 
         /* 스킬 섹션 */
+        .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+        .skill-button {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s ease;
+    }
+
+    .skill-button:hover {
+      background: linear-gradient(to right, #ff3cac, #784ba0);
+      color: white;
+    }
+        
         .skill-badges {
     display: flex;
     flex-wrap: wrap;
@@ -394,7 +418,26 @@
             transform-origin: left;
             transform: scaleX(0);
         }
+.modal.active {
+      visibility: visible;
+      opacity: 1;
+    }
 
+    .modal-content {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 400px;
+      color: white;
+    }
+
+    .modal-close {
+      text-align: right;
+      font-size: 1.2rem;
+      cursor: pointer;
+      color: #ff3cac;
+    }
         /* 연락처 섹션 */
         .contact {
             min-height: 100vh;
@@ -578,75 +621,84 @@
 
 
     <!-- 프로젝트 섹션 -->
- <section id="projects">
-   <h2 class="section-title">📌 Projects</h2>
- 
-   <a href="https://github.com/JeongHeon2/Nexacro" target="_blank" class="project-card">
-     <h3>Nexacro 기반 ERP 물류 프로젝트</h3>
-     <p class="sub">3인 팀 프로젝트</p>
-     <div class="tags">
-       <span>Spring Boot</span><span>MyBatis</span><span>JPA</span><span>Oracle</span><span>Nexacro</span><span>RESTful API</span>
-     </div>
-     <p class="desc">Front-End로는 NexaCro를 사용하고, Back-End는 SpringBoot, Mybatis, JPA, Java, DB는 Oracle을 사용했습니다.</p>
-   </a>
- 
-   <a href="https://github.com/JeongHeon2/React" target="_blank" class="project-card">
-     <h3>React 기반 ERP 물류 프로젝트</h3>
-     <p class="sub">3인 팀 프로젝트</p>
-     <div class="tags">
-       <span>Spring Boot</span><span>MyBatis</span><span>JPA</span><span>Oracle</span><span>React</span><span>Redux-Saga</span><span>Next.js</span>
-     </div>
-     <p class="desc">React + TypeScript 기반 UI, 상태관리는 Redux-Saga 사용, RESTful API 설계 및 Oracle과 연동된 프로젝트입니다.</p>
-   </a>
- 
-   <a href="쇼핑몰 프로젝트.pdf" target="_blank" class="project-card">
-     <h3>쇼핑몰 웹 애플리케이션</h3>
-     <p class="sub">1인 팀 프로젝트</p>
-     <div class="tags">
-       <span>Java</span><span>HTML</span><span>CSS</span><span>Spring Boot</span><span>Oracle</span><span>REST API</span>
-     </div>
-     <p class="desc">직관적인 UI 설계와 반응형 웹 구현, JSP + Spring 기반 CRUD 기능, 사용자/성적 관리 기능을 포함한 웹 애플리케이션입니다.</p>
-   </a>
- 
-   <a href="인공지능 기반 스마트 홈 트레이닝 시스템(AI는 못말려).pptx" target="_blank" class="project-card">
-     <h3>AI는 못말려</h3>
-     <p class="sub">5인 팀 프로젝트</p>
-     <div class="tags">
-       <span>Android Studio</span><span>Kotlin</span><span>Oracle</span><span>TensorFlow</span>
-     </div>
-     <p class="desc">홈트레이닝 중 자세 이상을 인식하여 부상을 방지하는 시스템으로, TensorFlow 기반 자세 인식 알고리즘을 구현했습니다.</p>
-   </a>
- </section>
+<section class="section" id="projects">
+    <h2 class="section-title">📌 Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="erp-nexacro-thumbnail.png" class="project-thumbnail" alt="Nexacro ERP" />
+        <div class="project-content">
+          <div class="project-title">Nexacro 기반 ERP 프로젝트</div>
+          <div class="project-description">Nexacro + Spring Boot + Oracle을 사용한 3인 팀 프로젝트입니다.</div>
+          <div class="project-tags">
+            <span>Nexacro</span><span>Spring Boot</span><span>Oracle</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="erp-react-thumbnail.png" class="project-thumbnail" alt="React ERP" />
+        <div class="project-content">
+          <div class="project-title">React 기반 ERP 프로젝트</div>
+          <div class="project-description">React + Redux-Saga로 상태관리, Oracle 연동 프로젝트</div>
+          <div class="project-tags">
+            <span>React</span><span>Redux-Saga</span><span>Spring Boot</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="shopping-thumbnail.png" class="project-thumbnail" alt="쇼핑몰" />
+        <div class="project-content">
+          <div class="project-title">쇼핑몰 웹 애플리케이션</div>
+          <div class="project-description">JSP + Spring 기반의 반응형 쇼핑몰 웹 서비스</div>
+          <div class="project-tags">
+            <span>Java</span><span>JSP</span><span>Spring</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="planning-thumbnail.png" class="project-thumbnail" alt="기획 프로젝트" />
+        <div class="project-content">
+          <div class="project-title">기획 중인 프로젝트</div>
+          <div class="project-description">새로운 아이디어로 서비스 기획 중이며 개발 예정입니다.</div>
+          <div class="project-tags">
+            <span>Planning</span><span>UX Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-    <section id="skills">
-   <h2 class="section-title">🛠️ Skills</h2>
-   <div class="skill-badges">
-     <button class="skill" onclick="openModal('java')">JAVA</button>
-     <button class="skill" onclick="openModal('oracle')">Oracle</button>
-     <button class="skill" onclick="openModal('htmlcss')">HTML/CSS</button>
-     <button class="skill" onclick="openModal('javascript')">JavaScript</button>
-     <button class="skill" onclick="openModal('jsp')">JSP</button>
-     <button class="skill" onclick="openModal('spring')">Spring</button>
-     <button class="skill" onclick="openModal('jpa')">JPA</button>
-     <button class="skill" onclick="openModal('mybatis')">MyBatis</button>
-     <button class="skill" onclick="openModal('git')">Git</button>
-     <button class="skill" onclick="openModal('react')">React</button>
-     <button class="skill" onclick="openModal('nexacro')">Nexacro</button>
-   </div>
- </section>
+    <section class="section" id="skills">
+    <h2 class="section-title">🛠 Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-button" onclick="openModal('Java')">Java</div>
+        <div class="skill-button" onclick="openModal('Spring')">Spring</div>
+        <div class="skill-button" onclick="openModal('JPA')">JPA</div>
+        <div class="skill-button" onclick="openModal('Mybatis')">Mybatis</div>
+      <div class="skill-button" onclick="openModal('Oracle')">Oracle</div>
+      <div class="skill-button" onclick="openModal('React')">React</div>
+      <div class="skill-button" onclick="openModal('Redux-Saga')">Redux-Saga</div>
+      <div class="skill-button" onclick="openModal('JSP')">JSP</div>
+        <div class="skill-button" onclick="openModal('JavaScript')">JavaScript</div>
+        <div class="skill-button" onclick="openModal('HTML/CSS')">HTML/CSS</div>
+        <div class="skill-button" onclick="openModal('Nexacro')">Nexacro</div>
+    </div>
+  </section>
  
- <div id="modal" class="modal">
-   <div class="modal-content">
-     <span class="close" onclick="closeModal()">&times;</span>
-     <h3 id="modal-title">Skill Name</h3>
-     <p id="modal-desc">Skill description will appear here.</p>
-   </div>
- </div>
+  <div class="modal" id="skill-modal">
+    <div class="modal-content">
+      <div class="modal-close" onclick="closeModal()">&times;</div>
+      <h3 id="modal-skill-title">Skill Title</h3>
+      <p id="modal-skill-desc">Skill Description...</p>
+    </div>
+  </div>
 
     <!-- 스킬 섹션 -->
     <script>
-   const skillDescriptions = {
+   const skillData = {
      java: { title: 'JAVA', desc: '객체 지향 기반 애플리케이션 개발 경험 보유' },
      oracle: { title: 'Oracle', desc: 'SQL 작성 및 DB 연동 개발 경험 보유' },
      htmlcss: { title: 'HTML/CSS', desc: '웹 마크업 및 반응형 스타일 구현' },
@@ -660,15 +712,15 @@
      nexacro: { title: 'Nexacro', desc: 'ERP 프론트엔드 개발 경험' }
    };
  
-   function openModal(key) {
-     document.getElementById('modal-title').innerText = skillDescriptions[key].title;
-     document.getElementById('modal-desc').innerText = skillDescriptions[key].desc;
-     document.getElementById('modal').style.display = 'block';
-   }
+   function openModal(skill) {
+      document.getElementById('modal-skill-title').innerText = skill;
+      document.getElementById('modal-skill-desc').innerText = skillData[skill];
+      document.getElementById('skill-modal').classList.add('active');
+    }
  
    function closeModal() {
-     document.getElementById('modal').style.display = 'none';
-   }
+      document.getElementById('skill-modal').classList.remove('active');
+    }
  
    window.addEventListener('keydown', (e) => {
      if (e.key === 'Escape') closeModal();
@@ -1008,3 +1060,4 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
 </body>
 
 </html>
+
