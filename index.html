@@ -78,6 +78,15 @@
           justify-content: space-between;
           align-items: center;
         }
+        .nav-links {
+          display: flex;
+          flex-direction: row; /* 이걸 꼭 추가해줘야 함! */
+          gap: 40px;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+        }
+
         
         .nav-section {
           flex: 1; /* 전체 너비를 3등분 */
@@ -474,7 +483,10 @@
         /* 반응형 스타일 */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+/*                 display: none; */
+                    flex-direction: row; /* 세로 → 가로 유지 */
+                    gap: 20px;
+                    justify-content: center;
             }
 
             .contact-container {
