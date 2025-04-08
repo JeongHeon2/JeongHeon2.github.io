@@ -95,19 +95,29 @@
         }
 
         .logo {
-            font-size: 1.2rem;
-            font-weight: 700;
-            background: linear-gradient(to right, var(--accent-1), var(--accent-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            cursor: pointer;
+          font-size: 2.0rem; /* 기존보다 키움 */
+          font-weight: 700;
+          background: linear-gradient(to right, var(--accent-1), var(--accent-2));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          cursor: pointer;
+          margin-left: 50px; /* ← 이거 추가해서 오른쪽으로 이동 */
         }
 
-        .nav-links {
+
+        .nav-link {
+          color: var(--text-primary);
+          text-decoration: none;
+          font-weight: 600;
+          position: relative;
+          font-size: 1.5rem; /* ← 기존보다 살짝 키움 */
           display: flex;
-          gap: 40px;
-          height: 100%; /* 높이 설정 */
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          line-height: 70px;
         }
+
 
         
         .nav-link {
