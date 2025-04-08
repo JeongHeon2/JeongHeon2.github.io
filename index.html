@@ -22,10 +22,18 @@
         :root {
             --bg-primary: #030303;
             --text-primary: #ffffff;
-            --accent-1: #FF006E;
-            --accent-2: #3A86FF;
+        
+            /* 기존 색상 */
+            /* --accent-1: #FF006E;
+            --accent-2: #3A86FF; */
+        
+            /* 새로운 블루 톤으로 변경 */
+            --accent-1: #38bdf8;  /* sky-400 */
+            --accent-2: #0ea5e9;  /* sky-500 */
+        
             --glass: rgba(255, 255, 255, 0.1);
         }
+
 
         body {
             background-color: var(--bg-primary);
@@ -66,21 +74,24 @@
 
         /* 네비게이션 */
         .nav {
-            position: fixed;
-            top: 40px;
-            width: 90%;
-            height: 70px; /* 높이 고정 */
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 20px;
-            background: rgba(3, 3, 3, 0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            border: 1px solid var(--glass);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        
+        .nav-section {
+          flex: 1; /* 전체 너비를 3등분 */
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .nav-section.left {
+          justify-content: flex-start;
+        }
+        
+        .nav-section.right {
+          justify-content: flex-end;
         }
 
         .logo {
@@ -565,14 +576,20 @@
 
     <!-- 네비게이션 -->
     <nav class="nav">
+      <div class="nav-section left">
         <div class="logo">JH Portfolio</div>
+      </div>
+      <div class="nav-section center">
         <div class="nav-links">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#contact" class="nav-link">Contact</a>
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#contact" class="nav-link">Contact</a>
         </div>
+      </div>
+      <div class="nav-section right"></div> <!-- 비워두면 중앙정렬됨 -->
     </nav>
+
 
     <!-- 히어로 섹션 -->
 <section class="hero" id="home">
@@ -611,8 +628,8 @@
     <!-- 프로젝트 섹션 -->
     <section class="projects" id="projects">
         <div class="section-header">
-            <h2 class="section-title">Featured Work</h2>
-            <p class="section-subtitle">혁신적인 기술과 창의적인 디자인으로 완성된 프로젝트들을 소개합니다.</p>
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">실제 문제를 해결하고, 사용자를 생각하며 만든 프로젝트를 소개합니다.</p>
         </div>
         <div class="projects-grid">
             <div class="project-card"  onclick="window.open('https://github.com/JeongHeon2/Nexacro', '_blank')">
